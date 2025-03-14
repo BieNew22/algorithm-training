@@ -43,9 +43,14 @@ public class Main {
                     cnt += 1;
                     last = data[i];
                 }
+                // REFACTOR : 끝까지 탐색할 필요 X, cnt == C를 만족하면 break; 해도됨.
+                /**
+                 * if (cnt == C) break;
+                 */
             }
 
             if (cnt >= C) {
+                // REFACTOR : max 할 필요가 없음. 현재 ans 값을 하한으로 탐색함.
                 ans = Math.max(ans, mid);
                 s = mid + 1;
             } else {
